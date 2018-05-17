@@ -1,0 +1,208 @@
+<div style="width: 700px; margin: auto;">
+  <table class="table table-striped">
+    <tbody>
+    <tr>
+      <td>
+        public name ="myName";
+      </td>
+      <td>
+        {{name}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        public name ="myName";
+      </td>
+      <td>
+       {{"text + name =" + name }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        name.length
+      </td>
+      <td>
+        {{name.length}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        name.toUpperCase()
+      </td>
+      <td>
+        {{name.toUpperCase()}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        greetUser()
+      </td>
+      <td>
+        {{greetUser()}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        public siteUsl = window.location.href;
+      </td>
+      <td>
+        {{siteUsl}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        input type="text" [id]="testId" value="value 1"<br>
+        input [disabled]="isDisabled" type="text" id={{testId}} value="value 2"
+      </td>
+      <td>
+        <input type="text" [id]="testId" value="value 1"><br>
+        <input [disabled]="isDisabled" type="text" id={{testId}} value="value 2">
+      </td>
+    </tr>
+    <tr>
+      <td>
+       Class
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        public blueClass= "blue";
+      </td>
+      <td [class]="blueClass">
+        [class]="blueClass"
+      </td>
+    </tr>
+    <tr>
+      <td>
+        public isDisabled = true;
+      </td>
+      <td [class.tomato]="isDisabled">
+        [class.tomato]="isDisabled"
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <pre>
+            public messageClass = <
+    "blue" : this.isDisabled,
+    "font-24" : this.isDisabled,
+    "italic" : this.isDisabled,
+>
+        </pre>
+      </td>
+      <td [ngClass] ="messageClass">
+        [ngClass] ="messageClass"
+      </td>
+    </tr>
+    <tr>
+      <td [style.color]="blueStyle">
+        [style.color]="blueStyle"
+      </td>
+      <td [style.color]="'red'">
+        [style.color]="'red'"
+      </td>
+    </tr>
+    <tr>
+      <td>
+
+      </td>
+      <td [style.color]="isDisabled ? 'blue': 'green'">
+        [style.color]="isDisabled ? 'blue': 'green'">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <pre>
+            public titleStyle = <
+              color: 'red',
+              fontSize: '36px'
+            >;
+        </pre>
+      </td>
+      <td [ngStyle]="titleStyle">
+        [ngStyle]="titleStyle"
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button (click)="onClick()">(click)="onClick()"</button>
+      </td>
+      <td>
+        {{isClick}}
+          <pre>
+              onClick() <
+                        console.log('console log');
+                        this.isClick ="text";
+                        this.isDisabled = false;
+            >
+          </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button  (click)="onClick($event)">
+          (click)="onClick($event)"
+        </button>
+
+      </td>
+      <td>
+          <pre>
+              onClick() <
+                  console.log(event);
+
+                >
+            {{name}}
+          </pre>
+      </td>
+    </tr>
+    <tr>
+      <td (click)="name='new name'">
+        (click)="name='new name'"
+      </td>
+      <td>
+        {{name}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input #myInput type="text">
+        <button (click)="logMessage(myInput.value)">
+         log
+        </button>
+      </td>
+      <td>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+
+      </td>
+      <td>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+
+      </td>
+      <td>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+
+      </td>
+      <td>
+
+      </td>
+    </tr>
+    <tbody>
+  </table>
+</div>
+
+
+
