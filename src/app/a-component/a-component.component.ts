@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+
 
 @Component({
   selector: 'app-a-component',
@@ -23,6 +24,20 @@ export class AComponentComponent implements OnInit {
     fontSize: '36px'
   };
   public isClick="";
+  public username = "";
+  public displayName = false;
+  public color ='green';
+  public colors =["green", "blue", "tomato"];
+  public colors2 =[{id: 1, name: "name1"}, {id: 2, name: "name2"}];
+  public lower = "LoWer";
+  public aperr = "aPeR fsdfdsf ds fsdf ";
+  public arr =[{id: 1, name: "jone"}, {id: 2, name: "mari"},{id: 3, name: "rydi"}];
+  public date = new Date;
+
+   //@Input() public parentData;
+   @Input('parentData') public  parent;
+   @Input() public message;
+   @Output() public childEvent = new EventEmitter();
 
 
   constructor() { }
@@ -45,5 +60,11 @@ export class AComponentComponent implements OnInit {
   logMessage(value){
     console.log(value);
 }
+  onParent (){
+    this.parent = "parentData click++++++";
+  }
 
+  fireEvent() {
+    this.childEvent.emit('childEvent')
+  }
 }

@@ -178,7 +178,10 @@
     </tr>
     <tr>
       <td>
-
+        <input type="text" [(ngModel)]="username">
+        <p>
+          {{username}}
+        </p>
       </td>
       <td>
 
@@ -186,7 +189,116 @@
     </tr>
     <tr>
       <td>
-
+        public displayName =true;
+      </td>
+      <td>
+        <p *ngIf="displayName">
+          *nfIf ="displayName"
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p *ngIf="displayName; then thenBlock; else elseBlock">
+          true
+        </p>
+        <ng-template #thenBlock>
+          ng-template #thenBlock true
+        </ng-template>
+        <ng-template #elseBlock>
+          ng-template #elseBlock false
+        </ng-template>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        [ngSwitch]
+      </td>
+      <td>
+        <div [ngSwitch]="color">
+          <p *ngSwitchCase="'red'"> *ngSwitchCase="'red'"</p>
+          <p *ngSwitchCase="'blue'"> *ngSwitchCase="'blue'"</p>
+          <p *ngSwitchCase="'green'"> *ngSwitchCase="'gren'"</p>
+          <p *ngSwitchDefault> *ngSwitchDefault</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        *ngFor = "let col of colors"
+      </td>
+      <td>
+          <p *ngFor = "let col of colors;index as i">
+            {{i}} - {{col}}
+          </p>
+        <p *ngFor = "let col of colors;first as f">
+          {{f}} - {{col}}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        *ngFor = "let col of colors2"
+      </td>
+      <td>
+        <p *ngFor = "let col of colors2">
+          {{col.id}}
+        </p>
+        <p *ngFor = "let col of colors2">
+          {{col.name}}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        parentData <br>
+        <button (click)="onParent ()">
+          onParent ()
+        </button>
+      </td>
+      <td>
+          {{parent}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button (click)="fireEvent()">
+          childEvent
+        </button>
+      </td>
+      <td>
+        {{message}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{lower | lowercase}}
+      </td>
+      <td>
+        {{aperr | uppercase}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{aperr | titlecase}}
+      </td>
+      <td>
+        {{aperr | slice:3}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{aperr | slice:3:5}}
+      </td>
+      <td>
+        {{arr | json}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{5.6787777 | number:'1.3-3'}}<br>
+        {{5.678 | number:'3.4-5'}}<br>
+        {{5.678 | number:'3.1-2'}}
       </td>
       <td>
 
@@ -194,10 +306,42 @@
     </tr>
     <tr>
       <td>
-
+        {{0.25 | percent}}
+      </td>
+      <td>
+          {{0.25 | currency}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{0.25 | currency : 'GBP'}}
+      </td>
+      <td>
+        {{0.25 | currency : 'GBP' : 'code'}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{0.25 | currency: 'UA': true}}
       </td>
       <td>
 
+      </td>
+    </tr>
+    <tr>
+      <td>
+          {{date}}
+      </td>
+      <td>
+        {{date | date: 'short'}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{date | date: 'shortDate'}}
+      </td>
+      <td>
+        {{date | date: 'shortTime'}}
       </td>
     </tr>
     <tbody>

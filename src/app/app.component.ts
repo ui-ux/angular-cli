@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  public parent = 'parent - app-component';
+  public message = "";
+  onParent (){
+    this.parent = "parentData click";
+  }
 }
